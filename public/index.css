@@ -1,0 +1,50 @@
+/*.body {*/
+/*    background-color: seagreen;*/
+/*    margin: 5px;*/
+/*}*/
+/*.root {*/
+/*    background-color: aquamarine;*/
+/*    margin: 5px;*/
+/*}*/
+
+.app {
+    background-color: #ece1f7;
+    height: 800px;
+    width: 800px;
+    padding: 10px;
+}
+
+.CheckPointBox {
+    background-color: red;
+    height: 30px;
+    width: 30px;
+    float:left;
+    padding: 10px;
+}
+
+.leftMenu {
+    height: 800px;
+    background-color: #f7ffd0;
+    width: 200px;
+    float:left;
+    padding: 10px;
+}
+
+.Contents {
+    height: 800px;
+    background-color: grey;
+    width: 600px;
+    margin-left: 200px;
+    float:left;
+    padding: 10px;
+}
+.CheckBox{
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    padding: 10px;
+}
+.Todos-txt{
+    display: inline-block;
+    padding: 10px;
+}
