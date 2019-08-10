@@ -16,11 +16,14 @@
 }
 
 .app {
+    background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+
+
     position: absolute;
     top: 5%;
     left: 17%;
 
-    background-color: #f2eaf3;
     height: 600px;
     width: 800px;
 
@@ -29,7 +32,9 @@
 }
 
 .CheckPointBox {
-    background-color: red;
+    background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+
     height: 30px;
     width: 30px;
     float: left;
@@ -37,8 +42,10 @@
 }
 
 .leftMenu {
+    background-color: rgba(255, 246, 186, 0.75);
+
     height: 580px;
-    background-color: #f7ffd0;
+    /*background-color: #f7ffd0;*/
     width: 200px;
     float: left;
     padding: 10px;
@@ -46,8 +53,7 @@
 }
 
 .Contents {
-    background-image: url("./back.png");
-    background-size: 450px;
+    background-color: rgba( 255, 255, 255, 0.75 );
 
     height: 800px;
     background-color: grey;
@@ -84,6 +90,8 @@
 }
 
 .group-box {
+    background-color: rgba( 255, 255, 255, 0.75 );
+
     display: block;
     padding: 10px;
     /*border: 10px solid #4f0500;*/
@@ -92,6 +100,8 @@
 }
 
 .Find-Box {
+    background-color: rgba( 255, 255, 255, 0.75 );
+
     height: 3.2em;
     background-color: #da4e4b;
     margin-bottom: 5px;
@@ -112,7 +122,7 @@
 }
 
 .Todo-box {
-    background-color: #ffaf40;
+    background-color: rgba(255, 167, 17, 0.75);
     margin-bottom: 3px;
     border: #282c34;
 }
