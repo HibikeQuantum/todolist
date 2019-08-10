@@ -1,3 +1,9 @@
+1) 드래그로 삭제할때 질문하기;
+2) CSS 완성하기
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -26,6 +32,9 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+
+
 
 ### `npm run eject`
 

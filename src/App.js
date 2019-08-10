@@ -120,19 +120,23 @@ export class App extends React.Component {
 
       return (
           <div className="app">
-            <div className="leftMenu">
-              <LeftMenu deleteItemByGroup={this.deleteItemByGroup} deleteGroup={this.deleteGroup}
-                        setSearchWord={this.setSearchWord} changeFocus={this.changeFocus}
-                        addGroup={this.addGroup}
-                        groups={this.state.groups} focused={this.state.focused}
-                        className="leftMenu"/>
+            <div className="upperBar"/>
+            <div className="main-container">
+              <div className="leftMenu">
+                <LeftMenu deleteItemByGroup={this.deleteItemByGroup} deleteGroup={this.deleteGroup}
+                          setSearchWord={this.setSearchWord} changeFocus={this.changeFocus}
+                          addGroup={this.addGroup}
+                          groups={this.state.groups} focused={this.state.focused}/>
+              </div>
+              <div className="contents">
+                <Contents groupsLen={this.state.groups.length} deleteItem={this.deleteItem}
+                          checkItem={this.checkItem}
+                          focused={this.state.focused}
+                          changeItem={this.changeItem}
+                          addItem={this.addItem} todos={todos}/>
+              </div>
             </div>
-            <div className="contents">
-              <Contents groupsLen={this.state.groups.length} deleteItem={this.deleteItem} checkItem={this.checkItem}
-                        focused={this.state.focused}
-                        changeItem={this.changeItem}
-                        addItem={this.addItem} todos={todos}/>
-            </div>
+            <div className="downside"/>
           </div>
       )
     }
