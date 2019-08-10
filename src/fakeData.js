@@ -4,9 +4,7 @@ export const fake = {
   load: false,
   searchMode: false,
   searchWord: "",
-  normalMode: true,
-  focused: 0
-  ,
+  focused: 0,
   groups: [
     {
       name: "진짜 할일",
@@ -19,7 +17,7 @@ export const fake = {
       key: uniqid()
     },
     {
-      name: "웃음보의 목",
+      name: "웃음보의 목표..?",
       index: 2,
       key: uniqid()
     }

@@ -7,17 +7,15 @@ const uniqid = require('uniqid');
 
 export class App extends React.Component {
   constructor(prop) {
-    super(prop)
+    super(prop);
     this.state = (fake);
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.searchWord.length > 0 && this.state.searchMode === false) {
-      this.setState({searchMode: true});
-      this.setState({focused: undefined})
+      this.setState({searchMode: true, focused: undefined});
     } else if (this.state.searchWord.length === 0 && this.state.searchMode === true) {
-      this.setState({searchMode: false});
-      this.setState({focused: 0})
+      this.setState({searchMode: false, focused: 0})
     }
   }
 
@@ -35,18 +33,18 @@ export class App extends React.Component {
         check: check, group: group, txt: txt, key: uniqid()
       })
     })
-  }
+  };
+
   changeItem = (key, txt) => {
     const items = this.state.items;
     this.setState({
           items: items.map(
-              el => el.key === key
-                  ? {...el, txt: txt}
-                  : el
+              el => el.key === key ? {...el, txt: txt} : el
           )
         }
     )
   };
+
   checkItem = (key) => {
     const items = this.state.items;
     this.setState({
@@ -70,8 +68,8 @@ export class App extends React.Component {
     })
   };
 
-  changeGroup = () => {
-  };
+  // changeGroup = () => {
+  // };
 
   deleteItem = (key) => {
     const items = this.state.items;
@@ -82,6 +80,7 @@ export class App extends React.Component {
         }
     )
   };
+
   deleteItemByGroup = (group) => {
     const items = this.state.items;
     this.setState({
@@ -91,6 +90,7 @@ export class App extends React.Component {
         }
     )
   };
+
   deleteGroup = (key, index) => {
     const groups = this.state.groups;
     this.setState({
@@ -121,13 +121,15 @@ export class App extends React.Component {
       return (
           <div className="app">
             <div className="leftMenu">
-              <LeftMenu deleteItemByGroup={this.deleteItemByGroup} deleteGroup={this.deleteGroup} setSearchWord={this.setSearchWord} changeFocus={this.changeFocus}
+              <LeftMenu deleteItemByGroup={this.deleteItemByGroup} deleteGroup={this.deleteGroup}
+                        setSearchWord={this.setSearchWord} changeFocus={this.changeFocus}
                         addGroup={this.addGroup}
                         groups={this.state.groups} focused={this.state.focused}
                         className="leftMenu"/>
             </div>
             <div className="contents">
-              <Contents groupsLen={this.state.groups.length} deleteItem={this.deleteItem} checkItem={this.checkItem} focused={this.state.focused}
+              <Contents groupsLen={this.state.groups.length} deleteItem={this.deleteItem} checkItem={this.checkItem}
+                        focused={this.state.focused}
                         changeItem={this.changeItem}
                         addItem={this.addItem} todos={todos}/>
             </div>
