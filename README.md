@@ -3,8 +3,6 @@
 2) CSS 완성하기; -> 현재 재공사 중
 
 
-
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

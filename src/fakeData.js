@@ -50,7 +50,7 @@ export const fake = {
     {
       checked: false,
       group: 1,
-      txt: "90년대: 백악기 공원, 늑대의 침묵, 펄프 픽사, 따뜻한 매트릭스, 타인의타닉",
+      txt: "90년대: 백악기 공원, 늑대의 침묵,   따뜻한 매트릭스, 타인의타닉",
       key: uniqid()
     },
     {

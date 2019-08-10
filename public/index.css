@@ -96,75 +96,73 @@
 }
 
 .Todo-box {
-
-
     max-width: auto;
     display: block;
     flex: 1 0 95%;
 }
 
 
-/*.CheckPointBox {*/
-/*    background-color: #ffffff;*/
-/*    background-color: rgba(255, 255, 255, 0.5);*/
+.CheckPointBox {
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
 
-/*    height: 30px;*/
-/*    width: 30px;*/
-/*    padding: 10px;*/
-/*}*/
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
 
 
-/*.CheckBox {*/
-/*    width: 17px;*/
-/*    height: 17px;*/
-/*    display: inline-block;*/
-/*    padding: 10px;*/
-/*}*/
+.CheckBox {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    padding: 10px;
+}
 
-/*.Todos-txt {*/
-/*    display: inline-block;*/
-/*    padding: 10px;*/
-/*}*/
+.Todos-txt {
+    display: inline-block;
+    padding: 10px;
+}
 
-/*.modifiyDo-box {*/
-/*    display: inline-block;*/
-/*    padding: 10px;*/
-/*}*/
+.modifiyDo-box {
+    display: inline-block;
+    padding: 10px;
+}
 
-/*.InputDo-box {*/
-/*    display: inline-block;*/
-/*    padding: 10px;*/
-/*}*/
+.InputDo-box {
+    display: inline-block;
+    padding: 10px;
+}
 
-/*.InputGroup-Box {*/
-/*    display: inline-block;*/
-/*    padding: 10px;*/
-/*}*/
+.InputGroup-Box {
+    display: inline-block;
+    padding: 10px;
+}
 
-/*.group-box {*/
-/*    background-color: rgba(255, 255, 255, 0.75);*/
+.group-box {
+    background-color: rgba(255, 255, 255, 0.75);
 
-/*    display: block;*/
-/*    padding: 10px;*/
-/*    background-color: #ffd518;*/
-/*    margin-bottom: 5px;*/
-/*}*/
+    display: block;
+    padding: 10px;
+    background-color: #ffd518;
+    margin-bottom: 5px;
+}
 
-/*.Find-Box {*/
-/*    background-color: rgba(255, 255, 255, 0.75);*/
-/*    height: 3.2em;*/
-/*    background-color: #da4e4b;*/
-/*    margin-bottom: 5px;*/
-/*}*/
+.Find-Box {
+    background-color: rgba(255, 255, 255, 0.75);
+    height: 3.2em;
+    background-color: #da4e4b;
+    margin-bottom: 5px;
+}
 
-/*.Find-Input-Box {*/
-/*    display: inline-block;*/
-/*    padding: 10px;*/
-/*}*/
+.Find-Input-Box {
+    display: inline-block;
+    padding: 10px;
+}
 
-/*.Find-Input-ICON {*/
-/*    display: inline-block;*/
-/*    padding: 10px;*/
-/*}*/
+.Find-Input-ICON {
+    display: inline-block;
+    padding: 10px;
+}
 
 
