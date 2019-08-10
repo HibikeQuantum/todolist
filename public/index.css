@@ -1,50 +1,118 @@
-/*.body {*/
-/*    background-color: seagreen;*/
-/*    margin: 5px;*/
-/*}*/
-/*.root {*/
-/*    background-color: aquamarine;*/
-/*    margin: 5px;*/
-/*}*/
+.html {
+    width: auto%;
+    height: auto%;
+}
+
+.body {
+    background-image: url("./back.png");
+    background-size: 450px;
+    width: auto;
+    height: auto;
+    position: relative;
+    font-size: 11pt;
+    font-family: monospace;
+
+
+}
 
 .app {
-    background-color: #ece1f7;
-    height: 800px;
+    position: absolute;
+    top: 5%;
+    left: 17%;
+
+    background-color: #f2eaf3;
+    height: 600px;
     width: 800px;
-    padding: 10px;
+
+    border: 2px solid;
+
 }
 
 .CheckPointBox {
     background-color: red;
     height: 30px;
     width: 30px;
-    float:left;
+    float: left;
     padding: 10px;
 }
 
 .leftMenu {
-    height: 800px;
+    height: 580px;
     background-color: #f7ffd0;
     width: 200px;
-    float:left;
+    float: left;
     padding: 10px;
+    display: block;
 }
 
 .Contents {
+    background-image: url("./back.png");
+    background-size: 450px;
+
     height: 800px;
     background-color: grey;
     width: 600px;
-    margin-left: 200px;
-    float:left;
     padding: 10px;
+    display: inline-block;
 }
-.CheckBox{
+
+.CheckBox {
     width: 17px;
     height: 17px;
     display: inline-block;
     padding: 10px;
 }
-.Todos-txt{
+
+.Todos-txt {
     display: inline-block;
     padding: 10px;
+}
+
+.modifiyDo-box {
+    display: inline-block;
+    padding: 10px;
+}
+
+.InputDo-box {
+    display: inline-block;
+    padding: 10px;
+}
+
+.InputGroup-Box {
+    display: inline-block;
+    padding: 10px;
+}
+
+.group-box {
+    display: block;
+    padding: 10px;
+    /*border: 10px solid #4f0500;*/
+    background-color: #ffd518;
+    margin-bottom: 5px;
+}
+
+.Find-Box {
+    height: 3.2em;
+    background-color: #da4e4b;
+    margin-bottom: 5px;
+}
+
+.Find-Input-Box {
+    display: inline-block;
+    padding: 10px;
+}
+
+.Find-Input-ICON {
+    display: inline-block;
+    padding: 10px;
+}
+
+.pastedList {
+
+}
+
+.Todo-box {
+    background-color: #ffaf40;
+    margin-bottom: 3px;
+    border: #282c34;
 }

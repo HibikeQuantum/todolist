@@ -1,28 +1,45 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import CheckPoint from './CheckPoint';
+import React, {Component} from 'react';
+import ModifyDo from './ModifyDo';
 
-const Todo = (props) => {
+class Todo extends Component {
+  constructor(props) {
+    super(props);
+    this.state = ({
+      savedText: this.props.todo.txt,
+      modifyText: false,
+    });
+  }
 
-  const color = props.todo.check ? "orange" : "red";
-  const tempStyle = {background: color};
-
-  const _onChangeEvent = (e) => {
-    console.log("클릭됨");
-    console.log(e.target.checked)
+  handleClick = () => {
+    this.props.checkItem(this.props.todo.key)
   };
 
-  return (
-      <div>
-        <input checked={props.todo.check} onChange={_onChangeEvent} type="checkbox" className=" CheckBox" style={tempStyle}/>
-        <div className=" Todos-txt">{props.todo.txt}</div>
-      </div>
-  )
-};
+  handleModifyClick = () => {
+    this.setState({modifyText: !this.state.modifyText});
+  };
 
-Todo.propTypes = {
-  check: PropTypes.bool,
-  txt: PropTypes.string
-};
+  saveText = (e) => {
+    this.setState({savedText: e.target.value})
+  };
+
+  _dragEnd = (e) => {
+    this.props.deleteItem(this.props.todo.key)
+  }
+
+
+  render() {
+
+    return (
+        <div className="Todo-box" draggable={true} onDragEnd={this._dragEnd} >
+          <input checked={this.props.todo.check} onChange={this.handleClick} type="checkbox" className="CheckBox"/>
+          {this.state.modifyText ?
+              <ModifyDo endModify={this.handleModifyClick} changeItem={this.props.changeItem}
+                        text={this.state.savedText} saveText={this.saveText} todo={this.props.todo}/> :
+              <div onClick={this.handleModifyClick} className=" Todos-txt">{this.props.todo.txt}</div>
+          }
+        </div>
+    );
+  }
+}
 
 export default Todo;

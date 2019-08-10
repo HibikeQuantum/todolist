@@ -1,46 +1,49 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Todo from './Todo';
 import AddTask from './AddTask'
-import PastedTodo from "./PastedTodo";
 
+// app ==>
 const Contents = (props) => {
-  console.log(props, "왜?")
   const focused = props.focused;
 
   let todoList = [];
   let pastedList = [];
-  if (props.todos.length) {
+  let makeBool = true;
+  if (props.todos.length || props.groupsLen) {
     props.todos.forEach((el) => {
-      if (el.check) {
+      if (!el.check) {
         todoList.push(el)
       } else {
         pastedList.push(el)
       }
     });
     if (todoList.length) {
-      todoList = todoList.map((el) => <Todo todo={el} key={el.group + el.txt}/>);
+      todoList = todoList.map((el) => <Todo deleteItem={props.deleteItem} todo={el} key={el.key} changeItem={props.changeItem} checkItem={props.checkItem}/>);
     }
     if (pastedList.length) {
-      pastedList = pastedList.map((el) => <Todo todo={el} key={el.group + el.txt}/>);
+      pastedList = pastedList.map((el) => <Todo deleteItem={props.deleteItem} todo={el} key={el.key} changeItem={props.changeItem} checkItem={props.checkItem}/>);
     }
+  } else {
+    todoList = '텅텅비었습니다. 그렇게 할일이 없나요..? 그룹을 먼저 만들어주세요 ~ 🙅'
+    pastedList = ''
+    makeBool = false;
   }
-  //포커스 처리
 
-  //검색 모드에선 el을 한번 더 검사해서 통과한것만 렌더링하게 구현한다.
   return (
       <div>
-        {todoList}
-        <AddTask focused={focused} addItem={props.addItem}/>
-        {pastedList}
+        <div className="todoList">
+          {todoList}
+        </div>
+        <div className="AddTask">
+          {makeBool?<AddTask focused={focused} addItem={props.addItem}/>:null}
+        </div>
+        <div className="pastedList">
+          {pastedList}
+        </div>
+        <div className={"trash-BOx"}>
+        </div>
       </div>
   )
 };
 
 export default Contents;
-
-// {
-//   check: false,
-//       group: 0,
-//     txt: "cat is good"
-// },

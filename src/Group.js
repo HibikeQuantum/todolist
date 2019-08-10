@@ -1,11 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
+// ==> leftMenu
 const Group = (props) => {
 
+  const changeFocus = () => {
+    props.changeFocus(props.data.index);
+  };
+
+  const deleteGroup = () => {
+    props.deleteGroup(props.data.key);
+    props.deleteItemByGroup(props.data.index);
+  };
+
+
+  let status = "";
+  if (props.focused === props.data.index) {
+    status = "✅";
+  } else {
+    status = "○";
+  }
+
+
   return (
-      <div>
-        {props.data.index}번 {props.data.name}
+      <div draggable={true} onDragEnd={deleteGroup} className="group-box" onClick={changeFocus}>
+        {status} {props.data.name}
       </div>
   )
 };
@@ -13,8 +30,3 @@ const Group = (props) => {
 Group.prototype = {}
 
 export default Group;
-
-//{
-//           name: "첫번째 후손",
-//           index: 0
-//         }

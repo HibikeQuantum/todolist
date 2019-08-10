@@ -16,7 +16,7 @@ const InputGroup = (props) => {
     return null
   } else {
     return (
-        <div>
+        <div className="InputGroup-Box">
           <input onKeyPress={_EnterEvent} autoFocus value={props.text} onChange={onChangeEvent} className="inputBox"/>
         </div>
     );

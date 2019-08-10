@@ -2,25 +2,18 @@ import React from 'react';
 import Find from './Find'
 import Group from './Group'
 import AddGroup from './AddGroup';
-import AddTask from './AddTask'
 
 const LeftMenu = (props) => {
-  console.log(props)
   const GroupList = props.groups.map((el) => (
-      <Group data={el} className="Group-menu" key={el.name +el.index}/>
+      <Group deleteItemByGroup={props.deleteItemByGroup} deleteGroup={props.deleteGroup} focused={props.focused} changeFocus={props.changeFocus} data={el} className="Group-menu" key={el.key}/>
   ));
 
   return (
       <div className="Sidebar">
-        <Find/>
+        <Find setSearchWord={props.setSearchWord} />
           {GroupList}
         <AddGroup addGroup={props.addGroup} />
       </div>
   );
-}
-
-LeftMenu.propTypes = {
-
-}
-
+};
 export default LeftMenu;
