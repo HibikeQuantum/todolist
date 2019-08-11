@@ -7,9 +7,9 @@ const Find = (props) => {
   };
 
   return (
-      <div className="Find-Box">
-        <span role="img" className="Find-Input-ICON">🔎</span>
-        <input className="Find-Input-Box" onChange={onChangeEvent}/>
+      <div className="FindInputBox">
+        <span role="img" className="FindInputIcon">🔎</span>
+        <input className="FindInput" onChange={onChangeEvent}/>
       </div>
   );
 };

@@ -21,7 +21,7 @@ const InputDo = (props) => {
   } else {
     return (
         <>
-            <input type="text" className="realInput" onBlur={onBlur} onKeyPress={EnterEvent} autoFocus value={props.text}
+            <input type="text" className="TodoInput" onBlur={onBlur} onKeyPress={EnterEvent} autoFocus value={props.text}
                    onChange={onChangeEvent}
             />
         </>

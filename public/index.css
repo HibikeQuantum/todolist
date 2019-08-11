@@ -4,58 +4,45 @@
 }
 
 .body .html {
-
 }
 
 #root {
     background-image: url("./back.png");
     background-size: 300px 300px;
     background-repeat: repeat;
-
-    /*검증완료*/
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
 
-    height: 100%;
     display: flex;
-    /*flex: 1; !* flex: 1 1 0 *!*/
-
     flex-direction: column;
     align-items: center;
-
-    /*이건 배경화면엣지를 0,0,0,0 좌표로 지정*/
 }
 
 .app {
-
-
     font-family: monospace;
-
     background-color: rgba(248, 255, 0, 0);
     margin: auto 0;
     display: flex;
-    flex: 1 1 0;
+    flex: 1;
     flex-direction: column;
-
 }
 
 .upperBar {
     width: 800px;
     height: 150px;
-    flex: 0 1 0;
-    display: inline;
-    font-size: 5em;
-    text-align: center;
-    margin-bottom: auto;
-
-    font-family: NanumSquareWeb;
-
     background-color: rgba(235, 0, 117, 0.02);
     color: #ffffff;
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -3px 20px rgba(255,255,255,0.4);
+    font-size: 5em;
+    text-align: center;
+
+    display: inline-block;
+    flex: 0 1 0;
+    font-family: NanumSquareWeb;
+    margin-top: auto;
 }
 
 .downside {
@@ -72,47 +59,40 @@
     width: auto;
 
     flex-direction: row;
-    flex: 1 1 0;
-    overflow: auto;
+    flex: 1;
 }
-
 
 .contents {
     border-left: 2px solid;
     background-color: rgba(245, 245, 218, 0.85);
     padding: 5px;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    flex: 1 1 0; /* flex: 1 1 0 */
-    /*height: 500px;*/
+    flex: 1;
 }
 
 .activeList {
-    /*background-color: rgba(255, 105, 10, 0.65);*/
     margin-bottom: 3px;
     padding: 10px;
     flex: 0 0 1;
 }
 
 .inactiveList {
-    /*background-color: rgba(61, 177, 255, 0.65);*/
     border-top: 2px solid;
     padding: 5px;
-    flex: 1 0 0;
-    /*margin-top: auto;*/
+    flex: 1;
 }
 
-.realInput {
-    /*display: inline;*/
+.TodoInput {
     background-color: rgba(82, 73, 255, 0.00);
     width: 100%;
+    /*무조건 부모박스 기준*/
     box-sizing: border-box;
-    /*밖으로 다 채워주는 역할*/
+    /* 100%면 넘치는게 보통, width 100% 해도 box안으로 넣어줌*/
 
     font-size: 1.3em;
     padding: 12px 20px 12px 40px;
     margin: 8px 0px 0px 0px;
-
 
     background-image: url("./pencil2.png");
     background-size: 1.3em;
@@ -125,29 +105,16 @@
     flex: 0 0 1;
 }
 
-
 .add-Icon {
     font-size: 2em;
     margin-left: 10px;
     size: 10px;
 }
 
-
 .Todos-txt {
     display: inline-block;
     padding: 10px;
 }
-
-
-.CheckPointBox {
-    background-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.5);
-
-    height: 30px;
-    width: 30px;
-    padding: 10px;
-}
-
 
 .CheckBox {
     width: 17px;
@@ -171,12 +138,6 @@
     flex: 1;
 }
 
-.InputDo-box {
-}
-
-.InputNewDo-BOX {
-}
-
 .inputDo {
     height: 2em;
     margin-bottom: auto;
@@ -189,7 +150,7 @@
     max-width: 250px;
     padding: 5px;
     display: inline-flex;
-    flex: 1; /* flex: 1 1 0 */
+    flex: 1;
     flex-direction: column;
 }
 
@@ -220,8 +181,6 @@
 }
 
 .group-box {
-    /*background-color: rgba(134, 153, 255, 0.22);*/
-
     display: block;
     /*padding: 10px;*/
     margin-bottom: 5px;
@@ -240,7 +199,7 @@
     background-color: #eb0041;
 }
 
-.Find-Box {
+.FindInputBox {
     background-color: rgba(255, 246, 78, 0.38);
     height: 3.2em;
     margin-bottom: 10px;
@@ -254,8 +213,8 @@
 
 }
 
-/*// 조정대상*/
-.Find-Input-Box {
+
+.FindInput {
     /*border: 1px solid #eb520f;*/
     width: 80%;
     padding: 10px;
@@ -264,12 +223,11 @@
     font-size: 1.3em;
 }
 
-.Find-Input-ICON {
+.FindInputIcon {
     flex: 1 0 1;
     padding: 10px;
     font-size:1.5em;
     margin: auto 0;
-    width: 10%;
 }
 
 
