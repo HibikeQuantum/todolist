@@ -4,9 +4,7 @@ export const fake = {
   load: false,
   searchMode: false,
   searchWord: "",
-  normalMode: true,
-  focused: 0
-  ,
+  focused: 0,
   groups: [
     {
       name: "진짜 할일",
@@ -19,7 +17,7 @@ export const fake = {
       key: uniqid()
     },
     {
-      name: "웃음보의 목",
+      name: "웃음보의 목표..?",
       index: 2,
       key: uniqid()
     }
@@ -52,7 +50,7 @@ export const fake = {
     {
       checked: false,
       group: 1,
-      txt: "90년대: 백악기 공원, 늑대의 침묵, 펄프 픽사, 따뜻한 매트릭스, 타인의타닉",
+      txt: "90년대: 백악기 공원, 늑대의 침묵,   따뜻한 매트릭스, 타인의타닉",
       key: uniqid()
     },
     {

@@ -1,66 +1,116 @@
-.html {
-    width: auto%;
-    height: auto%;
+.body .html {
+
 }
 
-.body {
+#root {
     background-image: url("./back.png");
-    background-size: 450px;
-    width: auto;
-    height: auto;
-    position: relative;
-    font-size: 11pt;
-    font-family: monospace;
+    background-size: 300px 300px;
+    background-repeat: repeat;
+    /*검증완료*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
+    height: 100%;
 
+    display: flex;
+    flex: 0; /* flex: 1 1 0 */
+    flex-direction: column;
+    /*이건 배경화면엣지를 0,0,0,0 좌표로 지정*/
 }
 
 .app {
-    background-color: #ffffff;
-    background-color: rgba( 255, 255, 255, 0.5 );
 
-
-    position: absolute;
-    top: 5%;
-    left: 17%;
-
-    height: 600px;
-    width: 800px;
+    font-size: 11pt;
+    font-family: monospace;
+    width: 750px;
+    height: 750px;
+    background-color: rgba(255, 255, 255, 0.5);
 
     border: 2px solid;
+    margin: auto;
+    display: flex;
+    flex: 1; /* flex: 1 1 0 */
+    flex-direction: column;
+
 
 }
 
-.CheckPointBox {
-    background-color: #ffffff;
-    background-color: rgba( 255, 255, 255, 0.5 );
-
+.upperBar {
+    background-color: rgba(255, 114, 207, 0.25);
     height: 30px;
-    width: 30px;
-    float: left;
-    padding: 10px;
+    flex: 1 0 inherit;
+    margin-top: auto;
+}
+
+.downside {
+    background-color: rgba(255, 114, 207, 0.25);
+    height: 30px;
+    flex: 1 0 inherit;
+    margin-bottom: auto;
+}
+
+.main-container {
+    /*background-color: rgba(255, 8, 0, 0.93);*/
+    display: flex;
+    width: auto;
+
+    flex-direction: row;
+    flex: 1 1 0; /* flex: 1 1 0 */
+    overflow: auto;
 }
 
 .leftMenu {
-    background-color: rgba(255, 246, 186, 0.75);
+    background-color: rgba(255, 253, 85, 0.5);
+    max-width: 200px;
+    padding: 5px;
+    flex: 1 1 0; /* flex: 1 1 0 */
 
-    height: 580px;
-    /*background-color: #f7ffd0;*/
-    width: 200px;
-    float: left;
+    display: inline-flex;
+}
+
+.contents {
+    background-color: rgba(156, 255, 192, 0.5);
+    padding: 5px;
+    flex: 1 1 0;
+    display: inline-flex;
+    /* flex: 1 1 0 */
+}
+
+/*부모 width를 그대로 따라가네..? 어떻게 해 이놈을 */
+
+.activeList{
+    background-color: rgba(255, 105, 10, 0.65);
+    margin-bottom: 3px;
     padding: 10px;
+
+}
+
+.inactiveList{
+    background-color: rgba(61, 177, 255, 0.65);
+    margin-bottom: 3px;
+    padding: 10px;
+    border: #ffffff 8px;
+}
+
+.Todo-box {
+    max-width: auto;
     display: block;
+    flex: 1 0 95%;
 }
 
-.Contents {
-    background-color: rgba( 255, 255, 255, 0.75 );
 
-    height: 800px;
-    background-color: grey;
-    width: 600px;
+.CheckPointBox {
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    height: 30px;
+    width: 30px;
     padding: 10px;
-    display: inline-block;
 }
+
 
 .CheckBox {
     width: 17px;
@@ -90,18 +140,16 @@
 }
 
 .group-box {
-    background-color: rgba( 255, 255, 255, 0.75 );
+    background-color: rgba(255, 255, 255, 0.75);
 
     display: block;
     padding: 10px;
-    /*border: 10px solid #4f0500;*/
     background-color: #ffd518;
     margin-bottom: 5px;
 }
 
 .Find-Box {
-    background-color: rgba( 255, 255, 255, 0.75 );
-
+    background-color: rgba(255, 255, 255, 0.75);
     height: 3.2em;
     background-color: #da4e4b;
     margin-bottom: 5px;
@@ -117,12 +165,4 @@
     padding: 10px;
 }
 
-.pastedList {
 
-}
-
-.Todo-box {
-    background-color: rgba(255, 167, 17, 0.75);
-    margin-bottom: 3px;
-    border: #282c34;
-}
