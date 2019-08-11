@@ -3,13 +3,16 @@ import React from 'react';
 // ==> AddGroup.js
 const InputGroup = (props) => {
   const onChangeEvent = (e) => {
-    props.saveText(e)
+    props._saveText(e)
   };
   const _EnterEvent = (e) => {
     if (e.key === 'Enter') {
-      props.addGroup(e.target.value);
-      props.clearText();
+      props._addGroup(e.target.value);
+      props._clearText();
     }
+  };
+  const onBlur = (e) => {
+    props._showingChange();
   };
 
   if (!props.showing) {
@@ -17,7 +20,7 @@ const InputGroup = (props) => {
   } else {
     return (
         <div className="InputGroup-Box">
-          <input onKeyPress={_EnterEvent} autoFocus value={props.text} onChange={onChangeEvent} className="inputBox"/>
+          <input onBlur={onBlur} onKeyPress={_EnterEvent} autoFocus value={props.text} onChange={onChangeEvent} className="inputBox"/>
         </div>
     );
   }

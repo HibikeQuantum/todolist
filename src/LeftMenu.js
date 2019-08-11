@@ -5,14 +5,17 @@ import AddGroup from './AddGroup';
 
 const LeftMenu = (props) => {
   const GroupList = props.groups.map((el) => (
-      <Group deleteItemByGroup={props.deleteItemByGroup} deleteGroup={props.deleteGroup} focused={props.focused} changeFocus={props.changeFocus} data={el} className="Group-menu" key={el.key}/>
+      <Group _deleteItemByGroup={props._deleteItemByGroup} _deleteGroup={props._deleteGroup} focused={props.focused}
+             _changeFocus={props._changeFocus} data={el} className="Group-menu" key={el.key}/>
   ));
 
   return (
       <div className="Sidebar">
-        <Find setSearchWord={props.setSearchWord} />
+        <Find _setSearchWord={props._setSearchWord}/>
+        <>
           {GroupList}
-        <AddGroup addGroup={props.addGroup} />
+        </>
+        <AddGroup _addGroup={props._addGroup}/>
       </div>
   );
 };

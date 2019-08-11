@@ -2,28 +2,29 @@ import React from 'react';
 
 // ==> AddTask.js
 const InputDo = (props) => {
-  const onChangeEvent = (e) => {
-    props.saveText(e)
 
+  const onChangeEvent = (e) => {
+    props._saveText(e)
   };
-  const _EnterEvent = (e) => {
+  const EnterEvent = (e) => {
     if (e.key === 'Enter') {
-      props.addItem(false, props.focused, e.target.value);
-      props.clearText();
+      props._addItem(false, props.focused, e.target.value);
+      props._clearText();
     }
   };
-  const onBlur = (e) => {
-    props.showingChange();
+  const onBlur = () => {
+    props._showingChange();
   };
 
   if (!props.showing) {
     return null
   } else {
     return (
-        <div className="InputDo-box">
-          <input onBlur={onBlur} onKeyPress={_EnterEvent} autoFocus value={props.text} onChange={onChangeEvent}
-                 className="inputBox"/>
-        </div>
+        <>
+            <input type="text" className="realInput" onBlur={onBlur} onKeyPress={EnterEvent} autoFocus value={props.text}
+                   onChange={onChangeEvent}
+            />
+        </>
     );
   }
 };

@@ -12,19 +12,19 @@ class AddTask extends Component {
     });
   }
 
-  showingChange = () => {
+  _showingChange = () => {
     this.setState({showing: !this.state.showing})
   }
 
   handleClickEvent = () => {
-    this.showingChange()
+    this._showingChange()
   };
 
-  saveText = (e) => {
+  _saveText = (e) => {
     this.setState({savedText: e.target.value})
   }
 
-  clearText = () => {
+  _clearText = () => {
     this.setState({savedText: ""});
   }
 
@@ -33,11 +33,14 @@ class AddTask extends Component {
       return null;
     } else {
       return (
-          <div>
-            <span role="img" className="add-Icon" onClick={this.handleClickEvent}>➕</span>
-            <InputDo showingChange={this.showingChange} clearText={this.clearText} focused={this.props.focused} addItem={this.props.addItem}
-                     showing={this.state.showing} text={this.state.savedText} saveText={this.saveText}/>
-          </div>
+          <>
+            {!this.state.showing?
+                <div className="add-Icon" role="img" onClick={this.handleClickEvent}>➕</div>:
+            null}
+            <InputDo _showingChange={this._showingChange} _clearText={this._clearText} focused={this.props.focused}
+                     _addItem={this.props._addItem}
+                     showing={this.state.showing} text={this.state.savedText} _saveText={this._saveText}/>
+          </>
       );
     }
   }
