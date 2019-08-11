@@ -3,7 +3,7 @@ import React from 'react';
 const Find = (props) => {
 
   const onChangeEvent = (e) => {
-    props.setSearchWord(e.target.value);
+    props._setSearchWord(e.target.value);
   };
 
   return (

@@ -4,24 +4,24 @@ import React from 'react';
 const InputDo = (props) => {
 
   const onChangeEvent = (e) => {
-    props.saveText(e)
+    props._saveText(e)
   };
 
-  const _EnterEvent = (e) => {
+  const EnterEvent = (e) => {
     if (e.key === 'Enter') {
-      props.changeItem(props.todo.key, e.target.value);
-      props.endModify();
+      props._changeItem(props.todo.key, e.target.value);
+      props._handleModifyClick();
     }
   };
 
-  const _onBlurHandle = (e) => {
-    props.changeItem(props.todo.key, e.target.value);
-    props.endModify();
+  const onBlurHandle = (e) => {
+    props._changeItem(props.todo.key, e.target.value);
+    props._handleModifyClick();
   };
 
   return (
       <div className="modifiyDo-box">
-        <input onBlur={_onBlurHandle} onKeyPress={_EnterEvent} autoFocus value={props.text} onChange={onChangeEvent}
+        <input onBlur={onBlurHandle} onKeyPress={EnterEvent} autoFocus value={props.text} onChange={onChangeEvent}
                className="modifyBox"/>
       </div>
   );
