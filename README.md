@@ -1,11 +1,11 @@
 ### Todolist for this proejct;
 1) 드래그로 삭제할때 질문하기;
-2) CSS 완성하기; -> 현재 재공사 중
 
 ### 08.11 완료
 1) 1.5초 드래깅 유지한뒤 삭제
 2) CSS 공사 flex 기반
 3) fake데이터의 check 미반영 수정
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -36,9 +36,6 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
-
 
 ### `npm run eject`
 
